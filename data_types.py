@@ -3,7 +3,7 @@ umur = 20
 tinggi = 174.5
 laki_laki = True
 
-#melakukan data 
+#melakukan pengenalan tipe data
 print(type(sapa))
 print(type(umur))
 print(type(tinggi))
