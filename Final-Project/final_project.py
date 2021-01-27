@@ -15,7 +15,7 @@ window.title("Email Sender")
 def upload_receiver():
     # Prosedur ini berguna untuk membuka dialog box untuk memasukkan file receiver list
     global filename
-    filename = filedialog.askopenfilename()
+    filename = filedialog.askopenfilename(title="Choose receiver_list.txt file")
 
 def attach_file():
     # Prosedur ini digunakan untuk menambahkan attachments
