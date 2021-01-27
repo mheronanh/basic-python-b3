@@ -21,6 +21,12 @@ def attach_file():
     # Prosedur ini digunakan untuk menambahkan attachments
     global attach_files
     attach_files = filedialog.askopenfilenames(title="Choose file(s)")
+    global frame4
+    frame4 = tk.Frame(master=window, border=5)
+    lbl_attachment = tk.Label(master=frame4, text=f"{len(attach_files)} file(s) attached")
+    lbl_attachment.pack()
+    frame4.pack()
+
 
 def kirim_email():
     # Keseluruhan prosedur ini untuk mengirim email
@@ -70,7 +76,9 @@ def kirim_email():
         server.sendmail(sender_email, recipients, message.as_string())
 
     messagebox.showinfo("Information", "Email has been sent.")
+    #reset gui after send an email
     attach_files = tuple()
+    frame4.destroy()
 
 # GUI
 # Pembuatan frame1
